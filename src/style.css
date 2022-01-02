@@ -5,6 +5,9 @@ html, body {
 }
 
 body {
+    background-image: url("./whataview.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,24 +21,58 @@ body {
 
 .header {
     flex-direction: row;
-    background-color: red;
+    background-color: #230C33;
     justify-content: space-between;
     align-items: center;
+    font-family: monospace;
+}
+
+.headerTitle {
+    color: white;
 }
 
 .headerBox {
     margin: 0px 20px 0px 20px;
 }
 
+.headerSearchInput {
+    padding: 10px;
+    border: none;
+}
+
+.headerSearchButton {
+    padding: 10px;
+    border: none;
+    background-color: #592E83;
+    color: white;
+    font-family: monospace;
+}
+
+.headerSearchButton:hover {
+    background-color: #47256A;
+}
+
+.headerUnitButton {
+    padding: 10px;
+    border: none;
+    background-color: #592E83;
+    color: white;
+    font-family: monospace;
+}
+
+
+.headerUnitButton:hover {
+    background-color: #47256A; 
+}
+
 
 .main {
     flex-direction: column;
     height: 100%;
-    background-color: yellowgreen;
     justify-content: space-between;
     font-family: monospace;
     font-size: 24px;
-    margin: 50px;
+    margin: 100px;
 }
 
 
@@ -84,8 +121,10 @@ body {
 }
 
 .footer {
-    background-color: green;
+    background-color: #230C33;
     justify-content: center;
+    font-family: monospace;
+    color: white;
 }
 
 .footerBox1 {

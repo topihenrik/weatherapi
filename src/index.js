@@ -22,6 +22,7 @@ async function generatePage() {
 
 
     header.className = "header";
+    headerTitle.className = "headerTitle";
     headerBox1.className = "headerBox";
     headerBox2.className = "headerBox";
     headerBox3.className = "headerBox";
