@@ -146,7 +146,7 @@ function generateMain(weatherData, unit) {
         mainHourlyWeatherTemperature.className = "mainHourlyWeatherTemperature";
         mainHourlyWeatherType.className = "mainHourlyWeatherType";
 
-        mainHourlyWeatherTime.textContent = new Date(weatherData.weatherData.hourly[i].dt * 1000).getHours() + ":" +  new Date(weatherData.weatherData.hourly[i].dt * 1000).getMinutes() + "0";
+        mainHourlyWeatherTime.textContent = new Date(weatherData.weatherData.hourly[i].dt*1000+weatherData.weatherData.timezone_offset*1000).getHours() + ":00";
         mainHourlyWeatherTemperature.textContent = unitConversion(weatherData.weatherData.hourly[i].temp, unit);
         mainHourlyWeatherType.textContent = weatherData.weatherData.hourly[i].weather[0].main;
 

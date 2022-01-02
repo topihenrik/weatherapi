@@ -1,10 +1,17 @@
 import "./style.css"
 import {getWeatherData} from "./fetch";
 import {generateMain} from "./main";
+import faviconData from "./favicon.svg";
 
 let weatherData;
 
 async function generatePage() {
+    const favicon = document.createElement("link");
+    favicon.setAttribute("rel", "icon");
+    favicon.setAttribute("href", faviconData);
+    document.head.appendChild(favicon);
+
+
     const header = document.createElement("div");
     const headerBox1 = document.createElement("div");
     const headerTitle = document.createElement("h1");
@@ -71,8 +78,8 @@ async function generatePage() {
 (async function(){
     let unit = "celcius";
     let main = await generatePage();
-    const headerSearchButton = document.querySelector(".headerSearchButton");
     const footer = document.querySelector(".footer");
+    const headerSearchButton = document.querySelector(".headerSearchButton");
     headerSearchButton.addEventListener("click", async function(){
         const headerSearchInput = document.querySelector(".headerSearchInput");
         let city = headerSearchInput.value;
@@ -85,6 +92,15 @@ async function generatePage() {
         main = generateMain(weatherData, unit);
         document.body.insertBefore(main, footer);
     });
+
+    const headerSearchInput = document.querySelector(".headerSearchInput");
+    headerSearchInput.addEventListener("keyup", function(e) {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            headerSearchButton.click();
+        }
+    })
+
     const headerUnitButton = document.querySelector(".headerUnitButton");
     headerUnitButton.addEventListener("click", function(){
         if (unit == "celcius") {

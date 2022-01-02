@@ -16,7 +16,6 @@ async function getWeatherData(city = "Helsinki") {
         const oneCall = await oneCallResponse.json();
 
         let data = {locationData: geolocation, weatherData: oneCall};
-        console.log(data);
         return data;
     } catch (error) {
         console.log(error);
