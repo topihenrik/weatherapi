@@ -1,3 +1,95 @@
 html, body {
     height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.header, .main, .footer {
+    display: flex;
+}
+
+
+.header {
+    flex-direction: row;
+    background-color: red;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerBox {
+    margin: 0px 20px 0px 20px;
+}
+
+
+.main {
+    flex-direction: column;
+    height: 100%;
+    background-color: yellowgreen;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 24px;
+    margin: 50px;
+}
+
+
+.mainCurrentWeather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mainCurrentWeatherBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDailyWeather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDailyWeatherContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainDailyWeatherDayBox {
+    margin: 15px;
+}
+
+.mainHourlyWeather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHourlyWeatherContent {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.mainHourlyWeatherHourBox {
+    margin: 15px;
+}
+
+.footer {
+    background-color: green;
+    justify-content: center;
+}
+
+.footerBox1 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
